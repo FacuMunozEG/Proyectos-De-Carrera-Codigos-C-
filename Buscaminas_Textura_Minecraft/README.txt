@@ -1,3 +1,7 @@
+En esta carpeta se encuentra un .zip con los .c y .h que los acompaña mas carpetas con las librerias y archivos necesarios para su correcta ejecucion.
+
+EL SIGUIENTE TUTORIAL FUE DISEÑADO PARA CONFIGURAR EL IDE CODE::BLOCKS. SI TRATASE PROBAR EL PROYECTO EN OTRO IDE LA CONFIGURACION DEBE CONSTAR CON LOS MISMOS LINKEOS.
+
 Pasos para incluir la librería ttf en el buscaminas:
 1) Incluir la librería SDL2_ttf.dll, que está dentro de la carpeta lib, en la carpeta bin/debug, junto con el .exe del proyecto y el SDL2.dll
 2) Para evitar linkear nuevos includes, dentro de Codeblocks, en Project/BuildOptions/Search Directories/Compiler, incluir el archivo SDL_ttf.h en la siguiente ubicación: SDL2-2.0.22\x86_64-w64-mingw32\include
@@ -32,4 +36,5 @@ Linkeos (SDL2):
 2) En Project/Build Options/Linker Settings/Other Linker Options, incluir (copiar y pegar): "-Imingw32 -ISDL2main -ISDL2 ".
 3) En Project/Build Options/Search Directories/Compiler agregar el siguiente link: “SDL2-2.0.22\x86_64-w64-mingw32\include”.
 4) En Project/Build Options/Search Directories/Linker agregar el siguiente link: “SDL2-2.0.22\x86_64-w64-mingw32\lib”.
+
 5) Una vez hecho todo esto en los archivos que queramos usar SDL2 debemos hacer el siguiente include : #include <SDL2/SDL.h>
